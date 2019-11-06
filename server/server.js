@@ -1,9 +1,24 @@
-const path = require('path')
-const fs = require('fs')
+const path = require('path');
+const fs = require('fs');
+const http = require('http');
 
-fs.writeFile('chirps.json', arr, (err) => {
-    
-})
+
+
+
+
+
+// http.createServer(function (req, res) {
+//     fs.writeFile('chirps.json', (err, data) => {
+//         res.writeHead(200, { 'content-Type': 'text/html' });
+//         res.write(data);
+//         res.end();
+//         console.log(data)
+//     })
+// })
+
+
+
+
 
 let arr = [
     {
@@ -44,4 +59,10 @@ let arr = [
     }
 ]
 
-console.log(arr)
+
+
+let data = JSON.stringify(arr)
+fs.writeFileSync('chirps.json', data)
+fs.readFile('chirps.json',(err, data) => {
+    console.log(JSON.parse(data))
+})

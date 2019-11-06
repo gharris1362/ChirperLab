@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/gharris1362/ChirperLab/issues"
   },
-  "homepage": "https://github.com/gharris1362/ChirperLab#readme"
+  "homepage": "https://github.com/gharris1362/ChirperLab#readme",
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
 }
-
